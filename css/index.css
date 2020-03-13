@@ -1,0 +1,290 @@
+body {
+    font-family    : "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin         : 0;
+    padding        : 0;
+    background     : url("../img/bg1.jpg") no-repeat fixed center content-box;
+    background-size: cover;
+
+    -moz-user-select   : none;
+    -o-user-select     : none;
+    -khtml-user-select : none;
+    -webkit-user-select: none;
+    -ms-user-select    : none;
+    user-select        : none;
+}
+
+.main {
+    margin          : auto;
+    margin-top      : 10px;
+    margin-bottom   : 5px;
+    width           : 1080px;
+    background-color: rgba(245, 245, 245, 0.5);
+    overflow        : hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    padding-left      : 4px;
+    padding-right     : 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+    box-sizing        : border-box;
+}
+
+.container {
+    margin: auto;
+    width : 1000px;
+}
+
+.container::before,
+.container::after,
+clearfix::before,
+clearfix::after {
+    content: "";
+    display: table;
+}
+
+.container::after,
+clearfix::after {
+    clear: both;
+}
+
+.topbar {
+    height        : 40px;
+    line-height   : 40px;
+    vertical-align: middle;
+    margin-top    : 30px;
+}
+
+.topbar select,
+input {
+    float: left;
+}
+
+.topbar select {
+    width        : 100px;
+    height       : 40px;
+    line-height  : 40px;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    box-sizing   : border-box;
+    border-style : ridge;
+    background   : rgb(236, 236, 236);
+}
+
+.topbar .url-input {
+    display     : block;
+    width       : 760px;
+    height      : 40px;
+    line-height : 40px;
+    font-size   : 1em;
+    box-sizing  : border-box;
+    border-style: inset;
+}
+
+.topbar select:hover {
+    background: rgb(240, 240, 240);
+    cursor    : pointer;
+}
+
+.topbar .send-btn {
+    float      : right;
+    display    : block;
+    width      : 120px;
+    height     : 40px;
+    line-height: 40px;
+    box-sizing : border-box;
+    border     : none;
+    background : rgb(9, 123, 237);
+    color      : #fff;
+    font-weight: bolder;
+}
+
+.topbar .send-btn:hover {
+    background: rgb(40, 143, 247);
+    cursor    : pointer;
+}
+
+.topbar .send-btn:active {
+    background: rgb(10, 100, 205);
+    cursor    : pointer;
+}
+
+.request .title,
+.response .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color      : rgba(34, 139, 34);
+}
+
+.request-nav {
+    background: rgb(250, 250, 250);
+}
+
+.request-nav ul {
+    padding: 0;
+    height : 35px;
+}
+
+.request-nav li {
+    display    : block;
+    float      : left;
+    width      : 90px;
+    height     : 35px;
+    line-height: 35px;
+    text-align : center;
+}
+
+.request-info-table {
+    text-align     : left;
+    width          : 100%;
+    border-collapse: collapse;
+    table-layout   : fixed;
+    background     : rgba(255, 255, 255, 0.6);
+}
+
+.request-info-table th,
+.request-info-table td {
+    text-align     : left;
+    width          : 100%;
+    height         : 30px;
+    border-collapse: collapse;
+
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.request-info-table th.key,
+.request-info-table th.value {
+    width: 40%;
+}
+
+.request-info-table th.operation {
+    width: 20%;
+}
+
+.request-info-table input,
+.request-info-table select {
+    height     : 30px;
+    line-height: 30px;
+    border     : none;
+    width      : 100%;
+}
+
+.request-content .tips {
+    color      : red;
+    background : rgba(245, 222, 179, 0.3);
+    font-size  : 0.9em;
+    font-style : italic;
+    font-weight: bold;
+    margin     : 0.5em 2em;
+}
+
+.add-param-btn {
+    width        : 90px;
+    height       : 34px;
+    background   : rgba(10, 160, 1, 0.7);
+    color        : #fff;
+    font-weight  : bold;
+    border       : none;
+    border-radius: 12px;
+    margin-top   : 4px;
+    outline      : none;
+}
+
+
+.add-param-btn:active {
+    background: rgba(0, 102, 0, 0.7);
+}
+
+.delete-param-btn {
+    background : rgb(40, 143, 247);
+    color      : #fff;
+    font-weight: bold;
+}
+
+.delete-param-btn:hover {
+    cursor    : pointer;
+    background: rgba(255, 69, 0, 0.9);
+    color     : #fff;
+}
+
+.delete-param-btn:active {
+    cursor    : pointer;
+    background: rgba(255, 0, 0, 1);
+    color     : #fff;
+}
+
+.response-nav {
+    background: rgb(250, 250, 250);
+}
+
+.response-nav ul {
+    padding: 0;
+    width  : 1000px;
+    height : 35px;
+}
+
+.response-nav li {
+    float      : left;
+    display    : block;
+    width      : 100px;
+    height     : 35px;
+    line-height: 35px;
+    text-align : center;
+}
+
+.request-nav li:hover,
+.response-nav li:hover {
+    background : rgb(255, 165, 0);
+    color      : white;
+    font-weight: bold;
+    cursor     : pointer;
+}
+
+.response-content div {
+    width        : 100%;
+    min-height   : 110px;
+    margin-bottom: 30px;
+}
+
+.response-content textarea {
+    width     : 100%;
+    min-height: 240px;
+    resize    : none;
+    box-sizing: border-box;
+}
+
+.request-content div {
+    width        : 100%;
+    min-height   : 100px;
+    margin-bottom: 30px;
+}
+
+.request-content textarea {
+    width     : 100%;
+    min-height: 240px;
+    resize    : none;
+    box-sizing: border-box;
+}
+
+/* Active tags */
+.select-show div {
+    display: none;
+}
+
+.request .active {
+    display: block;
+}
+
+.response .active {
+    display: block;
+}
+
+.tabs .active {
+    background : rgb(255, 165, 0);
+    color      : white;
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+{
+    "name": "postzero",
+    "version": "1.0.0",
+    "description": "A tools to send http/https request",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "package": "electron-packager . postzero --platform=win32 --arch=x64 --icon=./img/icon.ico --out=./build/Release/win32 --app-version=1.0.0 --overwrite --ignore=node_modules --asar"
+    },
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "zerosharp",
+    "license": "GUN General Public License v3.0",
+    "devDependencies": {
+        "electron": "^8.1.1",
+        "electron-packager": "^13.1.1"
+    }
+}

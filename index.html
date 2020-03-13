@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <title>postzero</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="topbar">
+      <div class="container">
+        <select id="requestMethods">
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+        </select>
+        <input type="url" class="url-input" id="url" placeholder="请输入要访问的URL">
+        <input type="submit" value="Send" class="send-btn" id="sendRequest">
+      </div>
+    </div>
+
+    <div class="request">
+      <div class="container">
+        <h2 class="title">Request</h2>
+        <div class="request-nav">
+          <ul id="request-tabs" class="tabs">
+            <li class="active"><span>Params</span></li>
+            <li><span>Headers</span></li>
+            <li><span>Body</span></li>
+          </ul>
+        </div>
+        <div class="select-show request-content">
+          <div id="params-area" class="request-item active">
+            <table class="request-info-table" id="paramsTable">
+              <tr>
+                <th class="key">KEY</th>
+                <th class="value">VALUE</th>
+                <th class="operation">OPERATION</th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" placeholder="参数名称" class="param-name">
+                </td>
+                <td>
+                  <input type="text" placeholder="参数值" class="param-value">
+                </td>
+                <td>
+                  <input type="button" value="删除参数" class="delete-param-btn">
+                </td>
+              </tr>
+            </table>
+            <button class="add-param-btn">添加参数</button>
+            <span class="tips">tips: 发送Get请求的时候，参数只写在url里也是可以的哦！</span>
+          </div>
+
+          <div id="headers-area" class="request-item">
+            <table class="request-info-table" id="headersTable">
+              <tr>
+                <th class="key">KEY</th>
+                <th class="value">VALUE</th>
+                <th class="operation">OPERATION</th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" placeholder="参数名称" class="param-name" readonly value="Content-Type">
+                </td>
+                <td>
+                  <input type="text" placeholder="参数值" class="param-value" value="application/x-www-form-urlencoded">
+                </td>
+                <td>
+                  <input type="button" value="此项不建议删除" class="delete-param-btn-disable" disabled>
+                </td>
+              </tr>
+            </table>
+            <button class="add-param-btn">添加请求头</button>
+          </div>
+          <div id="request-body-area" class="request-body-area request-item">
+            <textarea id="request-body" class="tabIndent" placeholder="自定义请求体，用于POST请求中发送嵌套JSON或者XML等复杂结构的数据，若有需要请在header栏手动设置Content-Type。
+注意：此项和Params项只会有一个生效，且该项优先级更高，如果不使用，请留空！"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="response">
+      <div class="container">
+        <h2 class="title">Response</h2>
+        <div class="response-nav">
+          <ul id="response-tabs" class="tabs">
+            <li class="active"><span>Body</span></li>
+            <li><span>Headers</span></li>
+          </ul>
+        </div>
+        <div class="select-show response-content">
+          <div id="response-body-area" class="response-item active">
+            <!-- 响应主体 -->
+            <textarea id="response-body" placeholder="这里将会显示响应结果中的响应主体"></textarea>
+          </div>
+          <div id="response-headers-area" class="response-item">
+            <!-- 响应头 -->
+            <textarea id="response-headers"  placeholder="这里将会显示响应结果中的响应头"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./jsonFormat.js"></script>
+  <script type="text/javascript" src="./tabIndent.js"></script>
+  <script type="text/javascript" src="./renderer.js"></script>
+</body>
+
+</html>
